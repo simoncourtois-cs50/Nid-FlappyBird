@@ -1,5 +1,6 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
+using TMPro;
 
 public class BirdController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class BirdController : MonoBehaviour
     public InputAction jumpAction;
     
     private bool m_jump;
+
+    public TMP_Text gameOver;
     
     void Start()
     {
@@ -26,33 +29,44 @@ public class BirdController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Game Over");
-            
+            GameManager.currentGameState = GameManager.GameState.GameOver;
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        Time.timeScale = 0f;
+        gameOver.gameObject.SetActive(true);
+
     }
 
     
     void Update()
     {
-
-
-        if (jumpAction.WasReleasedThisFrame())
+        if (GameManager.currentGameState == GameManager.GameState.Playing)
         {
-            m_jump = true;
-            rb.linearVelocity = Vector2.zero;
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            
+            if (jumpAction.WasReleasedThisFrame())
+            {
+                m_jump = true;
+                rb.linearVelocity = Vector2.zero;
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-        }
-        else m_jump = false;
+            }
+            else m_jump = false;
 
-        if (m_jump == false)
-        {
-            m_Animator.SetBool("fly", false);
+            if (m_jump == false)
+            {
+                m_Animator.SetBool("fly", false);
+            }
+
+            if (m_jump)
+            {
+                m_Animator.SetBool("fly", true);
+            }
         }
 
-        if (m_jump)
-        {
-            m_Animator.SetBool("fly", true);
-        }
+    
     }
 }

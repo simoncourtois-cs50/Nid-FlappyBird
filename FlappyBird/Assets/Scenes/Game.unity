@@ -1373,6 +1373,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &286462210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286462212}
+  - component: {fileID: 286462211}
+  m_Layer: 0
+  m_Name: PipeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &286462211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286462210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c604b3a65868c646ba96d92b67f300e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PipeSpawner
+  pipePrefab: {fileID: 6388492058696216297, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
+  spawnRate: 2.5
+--- !u!4 &286462212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286462210}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61446, y: 4.83066, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302464676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,24 +3789,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &867344284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6388492058696216297, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
-  m_PrefabInstance: {fileID: 4434073809589192255}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &867344286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867344284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac8b48ce971fa5745af02fc9890f75f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PipeMovement
-  speed: 2
 --- !u!1 &873179833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7978,17 +8006,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2821029135684039511, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
-      propertyPath: pipePrefab
-      value: 
-      objectReference: {fileID: 6388492058696216297, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
     - target: {fileID: 6388492058696216297, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
       propertyPath: m_Name
       value: PipeGreen
       objectReference: {fileID: 0}
     - target: {fileID: 8861524628612618349, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.52
+      value: -12.44
       objectReference: {fileID: 0}
     - target: {fileID: 8861524628612618349, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8026,15 +8050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6106755430631242364, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
-    - {fileID: 6915120008732131348, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6388492058696216297, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 867344286}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b60ac67bf652e543a6914dc4aecf027, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -8044,3 +8063,4 @@ SceneRoots:
   - {fileID: 394413177}
   - {fileID: 1233099274}
   - {fileID: 4434073809589192255}
+  - {fileID: 286462212}

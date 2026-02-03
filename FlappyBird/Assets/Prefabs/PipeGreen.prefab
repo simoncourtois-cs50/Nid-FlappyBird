@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 4737267384051408146}
   - component: {fileID: 6952644011858110269}
   - component: {fileID: 3578713923172758208}
+  - component: {fileID: 8966951305924481549}
   m_Layer: 0
   m_Name: PipeGreen
   m_TagString: Untagged
@@ -601,6 +602,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebfe1693f0801f4b8570f509c7c6f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreZone
+--- !u!210 &8966951305924481549
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388492058696216297}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &6637370051253798376
 GameObject:
   m_ObjectHideFlags: 0

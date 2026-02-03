@@ -17,14 +17,15 @@ public class BirdController : MonoBehaviour
     private bool m_jump;
     
 
-    public GameObject gameOver;
+    
     
     void Start()
     {
         m_Animator = gameObject.GetComponent<Animator>();
-        m_jump = false;
         
+        m_jump = false;
         jumpAction = InputSystem.actions.FindAction("Jump");
+        
         rb = GetComponent<Rigidbody2D>();
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -48,7 +49,7 @@ public class BirdController : MonoBehaviour
         if (GameManager.currentGameState == GameManager.GameState.Playing)
         {
             
-            if (jumpAction.WasReleasedThisFrame())
+            if (jumpAction.WasPressedThisFrame())
             {
                 m_jump = true;
                 rb.linearVelocity = Vector2.zero;

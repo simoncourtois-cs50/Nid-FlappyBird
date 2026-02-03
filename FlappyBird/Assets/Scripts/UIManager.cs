@@ -17,15 +17,13 @@ public class UIManager : MonoBehaviour
 
    void RestartGame()
    {
+      GameManager.currentGameState = GameManager.GameState.Restart;
 
-      Time.timeScale = 1.0f;
-      GameManager.currentGameState = GameManager.GameState.Playing;
-      SceneManager.LoadScene("Game");
    }
 
    void TaskOnClick()
    {
-      Debug.Log("Click");
+      
       RestartGame();
       
    }

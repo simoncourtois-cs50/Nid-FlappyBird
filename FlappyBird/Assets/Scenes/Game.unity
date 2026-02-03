@@ -1403,7 +1403,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PipeSpawner
   pipePrefab: {fileID: 6388492058696216297, guid: d9072ad55c6e486439567803cf87b353, type: 3}
-  spawnRate: 2.5
+  _spawnRate: 2
+  _challengesY:
+  - 14.6
+  - 7.53
+  m_challengeOccurence: 5
 --- !u!4 &286462212
 Transform:
   m_ObjectHideFlags: 0
@@ -1961,7 +1965,6 @@ MonoBehaviour:
       m_Action: Jump
       m_Flags: 0
     m_Flags: 0
-  gameOver: {fileID: 1893390691}
 --- !u!212 &394413176
 SpriteRenderer:
   serializedVersion: 2
@@ -5341,6 +5344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233099274}
+  - component: {fileID: 1233099275}
   m_Layer: 0
   m_Name: BasicGround
   m_TagString: Untagged
@@ -5384,6 +5388,19 @@ Transform:
   - {fileID: 1344118599}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1233099275
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233099273}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &1269922489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,7 +7013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbe3f6b8835e844d83209bfcc551451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameOverMenu: {fileID: 1893390691}
+  _gameOverMenu: {fileID: 1893390691}
 --- !u!1 &1720554808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,7 +8714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 1000'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

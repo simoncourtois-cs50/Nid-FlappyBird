@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
    public Button yourButton;
 
+   public GameManager m_gameManager;
    private void Start()
    {
       Button btn = yourButton.GetComponent<Button>();

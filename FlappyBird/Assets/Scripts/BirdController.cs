@@ -15,13 +15,15 @@ public class BirdController : MonoBehaviour
     public InputAction jumpAction;
     
     private bool m_jump;
+    
 
-    public TMP_Text gameOver;
+    public GameObject gameOver;
     
     void Start()
     {
         m_Animator = gameObject.GetComponent<Animator>();
         m_jump = false;
+        
         jumpAction = InputSystem.actions.FindAction("Jump");
         rb = GetComponent<Rigidbody2D>();
     }
@@ -29,15 +31,14 @@ public class BirdController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            GameManager.currentGameState = GameManager.GameState.GameOver;
             Die();
+            
         }
     }
 
     public void Die()
     {
-        Time.timeScale = 0f;
-        gameOver.gameObject.SetActive(true);
+        GameManager.currentGameState = GameManager.GameState.GameOver;
 
     }
 

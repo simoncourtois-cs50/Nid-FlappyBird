@@ -8529,7 +8529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   yourButton: {fileID: 1724440609}
-  m_gameManager: {fileID: 0}
 --- !u!114 &1724440609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8839,7 +8838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   yourButton: {fileID: 1724440609}
-  m_gameManager: {fileID: 1671425238}
 --- !u!114 &1824521682
 MonoBehaviour:
   m_ObjectHideFlags: 0
